@@ -324,12 +324,19 @@
             </p>
           </div>
           <div class="col-md-8 col-md-offset-2">
-            <form name="sentMessage" id="contactForm" novalidate>
+            <form
+              name="sentMessage"
+              id="contactForm"
+              novalidate
+              method="POST"
+              action="mail/contact_me.php"
+            >
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <input
                       type="text"
+                      name="name"
                       id="name"
                       class="form-control"
                       placeholder="Name *"
@@ -342,6 +349,7 @@
                   <div class="form-group">
                     <input
                       type="email"
+                      name="email"
                       id="email"
                       class="form-control"
                       placeholder="Email *"
@@ -354,6 +362,7 @@
                   <div class="form-group">
                     <input
                       type="text"
+                      name="contact"
                       id="contact"
                       class="form-control"
                       placeholder="Primary Contact Number *"
@@ -366,6 +375,7 @@
                   <div class="form-group">
                     <input
                       type="text"
+                      name="job_title"
                       id="job_title"
                       class="form-control"
                       placeholder="Job Title *"
@@ -378,6 +388,7 @@
                   <div class="form-group">
                     <input
                       type="text"
+                      name="company_name"
                       id="company_name"
                       class="form-control"
                       placeholder="Company Name *"
@@ -390,6 +401,7 @@
                   <div class="form-group">
                     <input
                       type="text"
+                      name="country"
                       id="country"
                       class="form-control"
                       placeholder="Country *"
@@ -402,6 +414,7 @@
                   <div class="form-group">
                     <input
                       type="text"
+                      name="project_name"
                       id="project_name"
                       class="form-control"
                       placeholder="Project Name *"
@@ -413,8 +426,9 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <input
-                      type=""
-                      id="contact"
+                      type="text"
+                      name="language"
+                      id="language"
                       class="form-control"
                       placeholder="Solidity or Rust?"
                     />
@@ -425,8 +439,8 @@
               <div class="form-group">
                 <textarea
                   name="message"
-                  id="inquiry"
                   class="form-control"
+                  id="message"
                   rows="4"
                   placeholder="Inquiry *"
                   required
@@ -445,6 +459,7 @@
               <div id="success"></div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
+
             <div class="social">
               <ul>
                 <li>
